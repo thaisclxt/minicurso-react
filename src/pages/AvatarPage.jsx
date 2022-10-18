@@ -1,3 +1,4 @@
+import { Title, Select, TextInput, Button, Image } from "@mantine/core";
 import { useState } from "react";
 import { avatarAPI } from "../service/api";
 
@@ -21,39 +22,39 @@ const AvatarPage = () => {
 
 	return (
 		<>
-			<h1>Criar Avatar</h1>
-			<div className="sprites">
-				Escolha um sprite:
-				<select
-					value={sprite}
-					onInput={(e) => setSprite(e.currentTarget.value)}
-				>
-					{sprites.map((element) => (
-						<option key={element}>{element}</option>
-					))}
-				</select>
-			</div>
+			<Title color="pink">Criar Avatar</Title>
 
-			<div
-				className="seed"
+			<Select
+				label="Escolha o sprite:"
+				searchable
+				nothingFound="Nenhuma opção"
+				data={sprites}
+				value={sprite}
+				onChange={setSprite}
+			/>
+
+			<TextInput
+				label="Entre com a seed:"
 				value={seed}
-				onInput={(e) => setSeed(e.currentTarget.value)}
+				onChange={(event) => setSeed(event.currentTarget.value)}
+			/>
+
+			<Button
+				variant="gradient"
+				gradient={{ from: "orange", to: "pink" }}
+				onClick={() => setAvatar(`${avatarAPI}${sprite}/${seed}.svg`)}
 			>
-				Entre com uma seed:
-				<input type="text" />
-			</div>
-
-			<button onClick={() => setAvatar(`${avatarAPI}${sprite}/${seed}.svg`)}>
 				Enviar
-			</button>
+			</Button>
 
-			{avatar !== undefined && (
-				<div className="avatar-image">
-					<figure>
-						<img src={avatar} alt="Avatar gerado" />
-					</figure>
-				</div>
-			)}
+			<Image
+				src={avatar}
+				height={300}
+				width={300}
+				alt="Avatar gerado"
+				caption="Avatar gerado"
+				withPlaceholder
+			/>
 		</>
 	);
 };
