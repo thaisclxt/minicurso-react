@@ -47,11 +47,13 @@ const AvatarPage = () => {
 				Enviar
 			</button>
 
-			<div className="avatar-image">
-				<figure>
-					<img src={avatar} alt="Avatar gerado" />
-				</figure>
-			</div>
+			{avatar !== undefined && (
+				<div className="avatar-image">
+					<figure>
+						<img src={avatar} alt="Avatar gerado" />
+					</figure>
+				</div>
+			)}
 		</>
 	);
 };
