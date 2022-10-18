@@ -1,10 +1,10 @@
-import AvatarPage from "./AvatarPage";
+import { Link } from "react-router-dom";
 
 function RootPage() {
 	return (
 		<div className="App">
 			<p>Página Inicial</p>
-			<AvatarPage />
+			<Link to="/avatar">Criar avatar</Link>
 		</div>
 	);
 }
