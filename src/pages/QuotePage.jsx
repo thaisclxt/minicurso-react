@@ -1,3 +1,4 @@
+import { Blockquote, Space, Title, Container } from "@mantine/core";
 import { useState, useEffect } from "react";
 import { animeAPI } from "../service/api";
 
@@ -17,17 +18,15 @@ const QuotePage = () => {
 	}, []);
 
 	return (
-		<div className="quote-page">
-			<div className="anime">
-				<p>Anime: {quote.anime}</p>
-			</div>
-			<div className="character">
-				<p>Personagem: {quote.character}</p>
-			</div>
-			<div className="quote">
-				<p>Citação: {quote.quote}</p>
-			</div>
-		</div>
+		<Container>
+			<Title color="pink">Citação aleatória</Title>
+
+			<Space h="sm" />
+
+			<Blockquote cite={`${quote["character"]} - ${quote["anime"]}`}>
+				{quote["quote"]}
+			</Blockquote>
+		</Container>
 	);
 };
 
