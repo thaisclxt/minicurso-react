@@ -1,4 +1,13 @@
-import { Title, Select, TextInput, Button, Image } from "@mantine/core";
+import {
+	Title,
+	Select,
+	TextInput,
+	Button,
+	Image,
+	Space,
+	Center,
+	Container,
+} from "@mantine/core";
 import { useState } from "react";
 import { avatarAPI } from "../service/api";
 
@@ -21,8 +30,10 @@ const AvatarPage = () => {
 	const [avatar, setAvatar] = useState();
 
 	return (
-		<>
+		<Container>
 			<Title color="pink">Criar Avatar</Title>
+
+			<Space h="sm" />
 
 			<Select
 				label="Escolha o sprite:"
@@ -33,11 +44,15 @@ const AvatarPage = () => {
 				onChange={setSprite}
 			/>
 
+			<Space h="md" />
+
 			<TextInput
 				label="Entre com a seed:"
 				value={seed}
 				onChange={(event) => setSeed(event.currentTarget.value)}
 			/>
+
+			<Space h="sm" />
 
 			<Button
 				variant="gradient"
@@ -47,15 +62,19 @@ const AvatarPage = () => {
 				Enviar
 			</Button>
 
-			<Image
-				src={avatar}
-				height={300}
-				width={300}
-				alt="Avatar gerado"
-				caption="Avatar gerado"
-				withPlaceholder
-			/>
-		</>
+			<Space h="sm" />
+
+			<Center>
+				<Image
+					src={avatar}
+					height={300}
+					width={300}
+					alt="Avatar gerado"
+					caption="Avatar gerado"
+					withPlaceholder
+				/>
+			</Center>
+		</Container>
 	);
 };
 
