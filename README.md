@@ -47,3 +47,21 @@ Algumas bibliotecas recomendadas para estilização de componentes no React:
 - [Mantine](https://mantine.dev/) - utilizada nesta aplicação
 - [Vite](https://vitejs.dev/)
 - [Styled Components](https://styled-components.com/)
+
+## Rotas
+Para fazer a manipulação de diferentes rotas, foi utilizado o pacote [React Router DOM](https://reactrouter.com/en/main), que pode ser adicionado à aplicação através do comando `npm i react-router-dom`.
+
+### Root Page
+Página inicial da aplicação, composta por citações aleatórias e imagens de avatar.
+
+![Root Page](/img/root-page.png)
+
+## Avatar Page
+Página para criar um avatar a partir da seleção de *sprite* e *seed*.
+
+![Avatar Page](/img/avatar-page.png)
+
+## Quote Page
+Página que exibe uma citação aleatória de anime, com o nome do personagem e o nome do anime.
+
+![Quote Page](/img/quote-page.png)
