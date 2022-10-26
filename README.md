@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Minicurso React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação Web desenvolvida para praticar alguns dos principais conceitos de React, para o minicurso ministrado por mim na Semana Acadêmica de Ciência da Computação - UFT
 
-## Available Scripts
+A aplicação consiste em citações aleatórias de animes e imagens de avatar geradas a partir de uma entrada, consumidas pelas APIs:
+- [Dicebear Avatar](https://github.com/public-apis/public-apis)
+- [Anime Chan](https://animechan.vercel.app/)
 
-In the project directory, you can run:
+Para acessar a gravação no Youtube:
+- [Minicurso React - Turma 1](https://www.youtube.com/watch?v=T8sY-6naiBU&t)
+- [Minicurso React - Turma 2](https://www.youtube.com/watch?v=o4lTt07hLfc&t)
 
-### `npm start`
+## Set up
+Para rodar esta aplicação na sua máquina, você precisará executar uma série de comandos em seu terminal:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `git clone`
+Para clonar este repositório, vá até o botão verde escrito **Code**, copie o link do projeto e cole depois do comando `git clone`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm install`
+Em seguida, baixe as dependências usadas na aplicação.
 
-### `npm test`
+## Tecnologias usadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### [Node.js](https://nodejs.org/en/)
+Na maioria das distribuições linux já vem instalado, você pode conferir por `node -v` ou `node --version`. \
+Caso não tenha, instale com `sudo apt install nodejs` ou `sudo npm install -g node`.
 
-### `npm run build`
+### [NPM](https://www.npmjs.com/)
+Gerenciador de Pacotes para o Node.js - *Node Package Manager*. \
+Para instalar, rode `sudo apt install npm`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### [React](https://reactjs.org/)
+Para criar uma aplicação com [Create React APP](https://reactjs.org/docs/create-a-new-react-app.html) execute os comandos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```shell
+npx create-react-app my-app
+cd my-app
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Abra [http://localhost:3000/](http://localhost:3000/) para visualizar no browser.
 
-### `npm run eject`
+## Estilização de componentes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Algumas bibliotecas recomendadas para estilização de componentes no React:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Mantine](https://mantine.dev/) - utilizada nesta aplicação
+- [Vite](https://vitejs.dev/)
+- [Styled Components](https://styled-components.com/)
